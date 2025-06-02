@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Roboto";
+	background-color: #f5f5f5 !important;
+	overflow: scroll;
+}
+
+@media (max-width: 779px) {
+	.posts {
+	}
+	.css-1sjizby-MuiGrid-root {
+		// flex-direction: column-reverse !important;
+		// align-items: center;
+	}
+}
+
+@media print {
+	.Header_root__ZyowK,
+	.noprint {
+		display: none !important;
+		visibility: hidden !important;
+	}
+	.posts {
+		visibility: visible;
+	}
+	.Post_root__puaGs {
+		break-after: page;
+	}
+	.editButtons {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.mainPosts {
+	margin-right: 50px !important;
+}
+
+.full {
+	display: flex !important;
+	flex-direction: row-reverse;
+	flex-wrap: nowrap;
+}
+
+.full {
+	&_title {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		font-size: 46px;
+		width: 200px;
+	}
+	&_sub {
+		max-width: 600px;
+		font-size: 26px;
+	}
+	&_btn {
+		background-color: #112c28 !important;
+		color: white !important;
+	}
+}
+
+.tabs {
+	color: #112c28 !important;
+}
+
+.css-1pjmil9-MuiButtonBase-root-MuiTab-root.Mui-selected {
+	color: #112c28 !important;
+}
+
+.css-2zw6hm-MuiTabs-indicator {
+	background-color: #112c28 !important;
+}
+
+.css-1xb9m63-MuiInputBase-root-MuiOutlinedInput-root {
+	color: #112c28 !important;
+}
+
+.noauth,
+.noapplies {
+	font-size: 18px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.css-3hvyi8-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+	color: #112c28 !important;
+}
+
+.css-1xb9m63-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+	border-color: #112c28 !important;
+}

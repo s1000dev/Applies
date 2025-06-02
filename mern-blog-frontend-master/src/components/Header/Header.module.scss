@@ -1,0 +1,54 @@
+.root {
+	background-color: #fff;
+	padding: 10px 0;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 30px;
+}
+
+.inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	color: #112c28;
+	background-color: #fff;
+	padding: 5px 20px;
+	font-weight: 900;
+	font-size: 30px;
+	line-height: 35px;
+	letter-spacing: 0.15px;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	span {
+		color: #288a7c;
+	}
+}
+
+.exit {
+	background-color: red !important;
+}
+
+.buttons {
+	button {
+		margin-left: 10px;
+		background-color: #112c28;
+		color: #fff;
+		&:hover {
+			border: none;
+			background-color: #288a7c;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.btn {
+	&:hover {
+		background-color: #288a7c;
+	}
+}

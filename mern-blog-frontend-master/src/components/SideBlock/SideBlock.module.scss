@@ -1,0 +1,42 @@
+.root {
+  margin: 0;
+  margin-bottom: 20px;
+
+  a {
+	border-radius: 10px;
+  }
+
+  a div{
+    margin: 0;
+    padding: 2px;
+    min-width: 0;
+  }
+  svg{
+    // fill: black;
+  }
+  ul{
+    padding: 15px;
+    overflow-x: scroll;
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+
+    &::-webkit-scrollbar {
+      visibility: hidden;
+      margin-top: 30px;
+      background: grey;
+      height: 10px;
+    }
+    &:hover::-webkit-scrollbar {
+      visibility: visible;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: #4361ee;
+      border-radius: 30px;
+    }
+  }
+}
+
+.title {
+  padding: 15px 15px 0 15px;
+}
