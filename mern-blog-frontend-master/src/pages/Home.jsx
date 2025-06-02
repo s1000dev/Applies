@@ -153,7 +153,7 @@ export const Home = () => {
 						<Button className='full_btn'>Обратиться к нам</Button>
 					</div>
 					<div>
-						<img src="${process.env.REACT_APP_API_URL}/uploads/about-img.png" alt="no" />
+						<img src=`${process.env.REACT_APP_API_URL}/uploads/about-img.png` alt="no" />
 					</div>
 				</div>
 				<p>2.385.920 товаров упаковали за 2024 год</p>
