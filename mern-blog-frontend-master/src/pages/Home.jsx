@@ -104,7 +104,7 @@ export const Home = () => {
 										< Post
 											id={obj._id}
 											title={obj.title}
-											imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ''}
+											imageUrl={obj.imageUrl ? `${process.env.REACT_APP_API_URL}${obj.imageUrl}` : ''}
 											user={obj.user}
 											createdAt={obj.createdAt.slice(0, 10)}
 											inventory={obj.inventory}
@@ -127,7 +127,7 @@ export const Home = () => {
 								< Post
 									id={obj._id}
 									title={obj.title}
-									imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ''}
+									imageUrl={obj.imageUrl ? `${process.env.REACT_APP_API_URL}${obj.imageUrl}` : ''}
 									user={obj.user}
 									createdAt={obj.createdAt.slice(0, 10)}
 									inventory={obj.inventory}
@@ -153,7 +153,7 @@ export const Home = () => {
 						<Button className='full_btn'>Обратиться к нам</Button>
 					</div>
 					<div>
-						<img src="http://localhost:4444/uploads/about-img.png" alt="no" />
+						<img src="${process.env.REACT_APP_API_URL}/uploads/about-img.png" alt="no" />
 					</div>
 				</div>
 				<p>2.385.920 товаров упаковали за 2024 год</p>
