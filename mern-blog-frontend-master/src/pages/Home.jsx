@@ -206,7 +206,7 @@ export const Home = () => {
 					}}>
 						<Box
 							component="img"
-							src={`http://localhost:4444/uploads/about-img.png`}
+							src={`${process.env.REACT_APP_API_URL}/uploads/about-img.png`}
 							alt="О компании"
 							sx={{
 								width: 'auto',
