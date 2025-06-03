@@ -251,7 +251,7 @@ export const Home = () => {
 							fontSize: { xs: '1.4rem', md: '1.8rem' },
 							color: 'text.secondary'
 						}}>
-							Количество заявок, которое обработала наша компания: {posts.items[posts.items.length - 1].num}
+							Количество заявок, которое обработала наша компания: {posts.items[posts?.items.length - 1].num}
 						</Typography>
 					</Box>
 
