@@ -74,6 +74,53 @@ p {
 	padding-bottom: 10px;
 }
 
+@media (max-width: 600px) {
+	.top {
+		flex-direction: column !important;
+	}
+	.top_first {
+		display: flex !important;
+		flex-direction: column !important;
+		span {
+			display: inline-block !important;
+			margin-top: 5px !important;
+			max-width: 90px;
+		}
+	}
+	.top_second {
+		display: flex !important;
+		flex-direction: column !important;
+		span {
+			display: inline-block !important;
+			margin-top: 5px !important;
+			max-width: 125px;
+		}
+	}
+	.statusRed {
+		margin-top: 5px !important;
+	}
+	.statusGreen {
+		margin-top: 5px !important;
+	}
+	.statusBlack {
+		margin-top: 5px !important;
+	}
+	.statusYellow {
+		margin-top: 5px !important;
+	}
+	.root {
+		&:before {
+			top: 145px !important;
+		}
+	}
+}
+
+.typee {
+	border-radius: 5px !important;
+	font-size: 40px !important;
+	background-color: red !important;
+}
+
 .nophoto {
 	padding: 0;
 	margin: 0;

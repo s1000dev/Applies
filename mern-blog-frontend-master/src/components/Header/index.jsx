@@ -28,7 +28,17 @@ export const Header = () => {
 		}
 	};
 
-	const [value, setValue] = React.useState(0);
+	const [tabIndex, setTabIndex] = React.useState(0);
+	const [statusValue, setStatusValue] = React.useState(4);
+	const currentType = ['all', 'tech', 'market'][tabIndex];
+	const currentStatus = statusValue;
+
+	const fetchData = React.useCallback(() => {
+		dispatch(fetchPosts({
+			type: currentType,
+			status: currentStatus
+		}));
+	}, [currentType, currentStatus, dispatch]);
 
 	function logoClick() {
 		let tags = document.querySelectorAll('.tags a');
@@ -36,8 +46,7 @@ export const Header = () => {
 			tag.style.outline = 'none';
 		}
 		navigate("/");
-		setValue(0);
-		dispatch(fetchPosts('all'));
+		fetchData();
 	}
 
 	return (

@@ -21,6 +21,12 @@
 	width: 100%;
 }
 
+@media (max-width: 600px) {
+	.title input {
+		font-size: 24px !important;
+	}
+}
+
 .tags {
 	margin: 15px 0;
 }

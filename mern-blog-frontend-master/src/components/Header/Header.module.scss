@@ -11,10 +11,45 @@
 	align-items: center;
 }
 
+.inner {
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	width: 100% !important;
+
+	// Мобильная версия (≤600px)
+	@media (max-width: 600px) {
+		flex-direction: column !important;
+		align-items: stretch !important;
+		gap: 16px !important;
+		padding: 8px 0 !important;
+
+		.logo {
+			order: 1 !important;
+			margin: 0 auto 12px auto !important;
+			text-align: center !important;
+			width: fit-content !important;
+		}
+
+		.buttons {
+			order: 2 !important;
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center;
+			gap: 8px !important;
+			width: 100% !important;
+
+			& > * {
+				justify-content: center !important;
+				margin: 0 !important;
+			}
+		}
+	}
+}
+
 .logo {
 	color: #112c28;
 	background-color: #fff;
-	padding: 5px 20px;
 	font-weight: 900;
 	font-size: 30px;
 	line-height: 35px;

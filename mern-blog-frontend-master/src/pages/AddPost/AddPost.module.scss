@@ -40,6 +40,12 @@
 	}
 }
 
+@media (max-width: 600px) {
+	.title input {
+		font-size: 24px !important;
+	}
+}
+
 .topbtns {
 	background-color: #112c28 !important;
 	color: white !important;

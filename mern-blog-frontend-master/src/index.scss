@@ -45,16 +45,20 @@ body {
 .full {
 	&_title {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-		font-size: 46px;
+		font-size: 40px !important;
 		width: 200px;
 	}
 	&_sub {
 		max-width: 600px;
-		font-size: 26px;
+		font-size: 22px !important;
+		margin-bottom: 20px;
 	}
 	&_btn {
 		background-color: #112c28 !important;
 		color: white !important;
+		padding: 10px 15px;
+		border-radius: 5px;
+		text-decoration: none;
 	}
 }
 

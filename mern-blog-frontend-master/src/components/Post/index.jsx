@@ -61,10 +61,6 @@ export const Post = ({
 		}
 	}
 
-	if (phone) {
-		console.log(phone)
-	}
-
 	let editPost;
 
 	if ((status == 0 || status == 1) && userData?.role != 0) {
@@ -77,7 +73,12 @@ export const Post = ({
 		<div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
 			{(phone) ? (<div className={styles.wrapper}>
 				<Grid className={styles.top} container rowSpacing={1}>
-					<div>Заявка № {num} <span className='type'>Клиентская</span></div>
+					<div className={styles.top_first}>Заявка № {num} <span style={{
+						backgroundColor: '#198304',
+						color: 'white',
+						borderRadius: '5px',
+						padding: "7px",
+					}}>Целевая</span></div>
 					<Grid className={styles.btns}>
 						<div className={styles.editButtons}>
 							{editPost && (
@@ -106,7 +107,12 @@ export const Post = ({
 				<div className={styles.text}><p><strong>Текст заявки:</strong> {String(text)}.</p></div>
 			</div>) : (<div className={styles.wrapper}>
 				<Grid className={styles.top} container rowSpacing={1}>
-					<div>Заявка № {num} <span className='type'>Техническая</span></div>
+					<div className={styles.top_second}>Заявка № {num} <span style={{
+						backgroundColor: '#1976d2',
+						color: 'white',
+						borderRadius: '5px',
+						padding: "7px",
+					}}>Техническая</span></div>
 					<Grid className={styles.btns}>
 						<div className={styles.editButtons}>
 							{editPost && (
