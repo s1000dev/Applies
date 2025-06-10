@@ -13,7 +13,6 @@ import { UserController, PostController, AppliesController } from './controllers
 
 mongoose
 	.connect(process.env.MONGODB_URI)
-	// .connect(process.env.MONGODB_URI)
 	.then(() => console.log('DB ok'))
 	.catch((err) => console.log('DB error', err));
 
@@ -59,6 +58,7 @@ app.patch(
 );
 
 app.post('/apps', checkAuth, postCreateValidation, handleValidationErrors, AppliesController.create);
+app.get('/apps/:id', AppliesController.getOneApply);
 app.delete('/apps/:id', checkAuth, AppliesController.remove);
 app.patch(
 	'/apps/:id',

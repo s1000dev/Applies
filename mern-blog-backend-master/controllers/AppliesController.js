@@ -102,3 +102,39 @@ export const update = async (req, res) => {
 		});
 	}
 };
+
+export const getOneApply = async (req, res) => {
+	try {
+		const postId = req.params.id;
+
+		ApplyModel.findOneAndUpdate(
+			{
+				_id: postId,
+			},
+			{
+				returnDocument: 'after',
+			},
+			(err, doc) => {
+				if (err) {
+					console.log(err);
+					return res.status(500).json({
+						message: 'Ошибка при получении заявки',
+					});
+				}
+
+				if (!doc) {
+					return res.status(404).json({
+						message: 'Заявка не найдена',
+					});
+				}
+
+				res.json(doc);
+			},
+		).populate('user');
+	} catch (err) {
+		console.log(err);
+		res.status(500).json({
+			message: 'Ошибка при получении заявки',
+		});
+	}
+};
