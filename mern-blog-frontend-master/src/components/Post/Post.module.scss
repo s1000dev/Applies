@@ -76,7 +76,7 @@ p {
 
 @media (max-width: 600px) {
 	.top {
-		flex-direction: column !important;
+		align-items: flex-end;
 	}
 	.top_first {
 		display: flex !important;
@@ -110,7 +110,7 @@ p {
 	}
 	.root {
 		&:before {
-			top: 145px !important;
+			top: 105px !important;
 		}
 	}
 }

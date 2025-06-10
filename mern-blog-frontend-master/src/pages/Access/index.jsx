@@ -20,6 +20,10 @@ export const Access = () => {
 
 	async function handleSubmit(e) {
 		e.preventDefault();
+		if (email == null) {
+			alert('Введите электронную почту!')
+			return false;
+		}
 		const { data } = await axios.get(`/role/${email}`);
 		if (data.role === 0) {
 			alert('Вы успешно установили права модератора у пользователя ' + email);

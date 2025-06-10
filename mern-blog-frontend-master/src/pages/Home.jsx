@@ -6,7 +6,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Grid from '@mui/material/Grid';
 import TextField from "@mui/material/TextField";
-import { MenuItem, Select, FormControl, InputLabel, Typography, Box } from '@mui/material';
+import { MenuItem, Select, FormControl, InputLabel, Typography, Box, shadows } from '@mui/material';
 
 import { Post } from '../components/Post';
 import { fetchNamePosts, fetchPosts } from '../redux/slices/posts';
@@ -189,7 +189,16 @@ export const Home = () => {
 							sx={{
 								px: 4,
 								py: 1.5,
-								fontSize: '4rem'
+								fontSize: '3rem',
+								fontWeight: 600,
+								borderRadius: '8px',
+								textTransform: 'none',
+								boxShadow: 3,
+								'&:hover': {
+									transform: 'translateY(-2px)',
+									boxShadow: 6
+								},
+								transition: 'all 0.3s ease'
 							}}
 						>
 							Обратиться к нам
@@ -251,7 +260,7 @@ export const Home = () => {
 							fontSize: { xs: '1.4rem', md: '1.8rem' },
 							color: 'text.secondary'
 						}}>
-							Количество заявок, которое обработала наша компания:
+							Количество заявок, которое обработала наша компания: 50+
 						</Typography>
 					</Box>
 
@@ -265,13 +274,29 @@ export const Home = () => {
 						}
 					}}>
 						<Typography variant="subtitle1" component="p" sx={{ fontWeight: 600 }}>
-							Котельник Угрешский проезд, 8
+							Котельники, Угрешский проезд, 8
 						</Typography>
 						<Typography variant="body1" component="p">
 							Пн - Сб 10:00 - 20:00
 						</Typography>
 						<Typography variant="body1" component="p" sx={{ mt: 2 }}>
-							<Button href="tel:+79646341221" color="inherit" underline="hover">
+							<Button href="tel:+79646341221" sx={{
+								px: 3,
+								py: 2,
+								fontSize: '1.1rem',
+								fontWeight: 600,
+								borderRadius: '8px',
+								textTransform: 'none',
+								backgroundColor: '#288a7c',
+								color: '#fff',
+								boxShadow: 3,
+								'&:hover': {
+									transform: 'translateY(-2px)',
+									boxShadow: 6,
+									backgroundColor: '#112c28'
+								},
+								transition: 'all 0.3s ease'
+							}}>
 								+7 (964) 634-12-21
 							</Button>
 						</Typography>
@@ -285,7 +310,7 @@ export const Home = () => {
 						variant="contained"
 						size="large"
 						sx={{
-							px: 6,
+							px: 7,
 							py: 2,
 							fontSize: '1.1rem',
 							fontWeight: 600,

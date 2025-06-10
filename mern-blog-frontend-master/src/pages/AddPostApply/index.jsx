@@ -22,7 +22,6 @@ export const AddPostApply = () => {
 	const [isLoading, setLoading] = React.useState(false);
 	const [text, setText] = React.useState('');
 	const [title, setTitle] = React.useState('');
-	const [worker, setWorker] = React.useState('');
 	const [status, setStatus] = React.useState('');
 	const [oldStatus, setOldStatus] = React.useState('');
 	const [phone, setPhone] = React.useState('');
@@ -38,12 +37,7 @@ export const AddPostApply = () => {
 		let failed = false;
 		console.log(fields)
 		if (Object.keys(fields).length == 1) {
-			// if (fields.worker.length < 5) {
-			// 	msg = 'Поле рабочий должно иметь больше 5 символов!'
-			// 	failed = true;
-			// 	alert(msg)
-			// 	return false;
-			// }
+
 		} else {
 			if (fields.title.length < 5) {
 				msg = 'Поле проблема должно иметь больше 5 символов!'
@@ -83,6 +77,8 @@ export const AddPostApply = () => {
 				}
 			}
 
+			console.log(fields, status)
+
 			if (checkFields(fields)) {
 				const { data } = isEditing ? await axios.patch(`/apps/${id}`, fields) : await axios.post('/apps', fields);
 
@@ -99,8 +95,7 @@ export const AddPostApply = () => {
 
 	React.useEffect(() => {
 		if (id) {
-			axios.get(`/posts/${id}`).then(({ data }) => {
-				setWorker(data.worker);
+			axios.get(`/apps/${id}`).then(({ data }) => {
 				setStatus(data.status);
 				setOldStatus(data.status);
 			}).catch(err => {
